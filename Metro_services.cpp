@@ -176,14 +176,14 @@ node* merge(node *head,int nodenum)
     {
         int order=head->order;
         if(arr[order]==NULL){
-            cout<<"inside if: head="<<head->data<<"\n";
+           // cout<<"inside if: head="<<head->data<<"\n";
             arr[order]=head; head=head->rp;
         }
         else
         {
             if(head==arr[order])
                 return head;
-            cout<<"inside else: head="<<head->data<<"\n";
+            //cout<<"inside else: head="<<head->data<<"\n";
             //int counter=0;
             //if(htemp==arr[order] || htemp==head)
                // counter=1;
@@ -232,7 +232,7 @@ node* deletemin(node *head,node *minptr,int nodenum)
                             }
 
     head=merge(head,nodenum);
-    cout<<"inside deletemin head="<<head->data<<"\n";
+   // cout<<"inside deletemin head="<<head->data<<"\n";
     return head;
 
 
@@ -285,7 +285,7 @@ void find_mst(int arr[n][n],int mst[n][n])
                  head=p->head; minptr=p->minptr;
             }
         }
-        cout<<"after insertions with "<<current_vrtx<<":\n";
+      //  cout<<"after insertions with "<<current_vrtx<<":\n";
         cout<<"\n"; node *t=head;
                             while(1)
                             {
@@ -322,10 +322,10 @@ void find_mst(int arr[n][n],int mst[n][n])
 
             nodenum--;
             head=deletemin(head,minptr,nodenum);
-            cout<<"just after delete head="<<head<<"\n";
+           // cout<<"just after delete head="<<head<<"\n";
             minptr=setmin(head,minptr);
 
-cout<<"after delete:\n"; cout<<"head="<<head<<"\n";
+//cout<<"after delete:\n"; cout<<"head="<<head<<"\n";
                            t=head;
                            while(1)
                             {
@@ -354,7 +354,7 @@ int main()
 
     int arr[n][n];
 
-    cout<<"enter budget required to connect each stations:\n";
+   // cout<<"enter budget required to connect each stations:\n";
     for(int i=0;i<n;i++)
     {
         for(int j=0;j<n;j++)
